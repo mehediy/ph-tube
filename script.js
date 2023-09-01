@@ -16,7 +16,7 @@ const displayCategories = (data) => {
   data.forEach((cat) => {
     // console.log(cat);
     const button = document.createElement("button");
-    button.innerHTML = `<button onclick="loadData(${cat.category_id})" class="bg-gray-200 rounded py-1 px-4">${cat.category}</button>`;
+    button.innerHTML = `<button onclick="loadData(${cat.category_id})" class="bg-gray-200 text-gray-500 rounded py-1 px-4">${cat.category}</button>`;
     categoriesContainer.append(button);
   });
 };
@@ -54,7 +54,7 @@ const displayCards = (data) => {
     card.innerHTML = `
     <!-- Card -->
     <div>
-      <div class="rounded mb-4 overflow-hidden h-[200px] bg-[url('${
+      <div class="rounded-md mb-4 overflow-hidden h-[200px] bg-[url('${
         data.thumbnail
       }')] bg-cover bg-no-repeat bg-center relative">
       
