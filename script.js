@@ -73,7 +73,11 @@ const displayCards = (data) => {
           <a href="#" class="font-bold">${data.title}</a>
           <h3 class="text-sm text-gray-500">${
             data.authors[0].profile_name
-          } <span></span></h3>
+          } <span>${
+      data.authors[0].verified
+        ? "<img class='inline-block' src='./assets/verified.svg'>"
+        : ""
+    }</span></h3>
           <span class="text-sm text-gray-500">${data.others.views}</span>
         </div>
       </div>
