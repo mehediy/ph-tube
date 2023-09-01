@@ -21,14 +21,27 @@ const displayCategories = (data) => {
   });
 };
 
+const cardContainer = document.getElementById("cards");
+const notFound = document.getElementById("notFound");
+
 // Load data using category ID
 let loadData = async (id) => {
   const res = await fetch(
     `https://openapi.programming-hero.com/api/videos/category/${id}`
   );
   const data = await res.json();
-  //   console.log(data);
-  displayCards(data.data);
+  //   console.log(data.data);
+
+  // Not Found Page
+  if (data.data.length == 0) {
+    cardContainer.textContent = "";
+    notFound.classList.remove("hidden");
+  } else {
+    notFound.classList.contains("hidden")
+      ? true
+      : notFound.classList.add("hidden");
+    displayCards(data.data);
+  }
 };
 loadData(1000);
 
@@ -45,7 +58,7 @@ const convertSeconds = (seconds) => {
 };
 
 // Display Cards
-const cardContainer = document.getElementById("cards");
+// const cardContainer = document.getElementById("cards");
 const displayCards = (data) => {
   cardContainer.textContent = "";
   data.forEach((data) => {
