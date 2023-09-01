@@ -32,6 +32,16 @@ let loadData = async (id) => {
   const data = await res.json();
   //   console.log(data.data);
 
+  //   Sort by Views
+  document.getElementById("sortByView").addEventListener("click", () => {
+    data.data.sort((a, b) => {
+      const viewA = parseInt(a.others.views.replace("K", ""));
+      const viewB = parseInt(b.others.views.replace("K", ""));
+      return viewB - viewA;
+    });
+    displayCards(data.data);
+  });
+
   // Not Found Page
   if (data.data.length == 0) {
     cardContainer.textContent = "";
