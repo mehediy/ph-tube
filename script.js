@@ -47,13 +47,14 @@ const convertSeconds = (seconds) => {
 // Display Cards
 const cardContainer = document.getElementById("cards");
 const displayCards = (data) => {
+  cardContainer.textContent = "";
   data.forEach((data) => {
     // console.log(data);
 
     const card = document.createElement("div");
     card.innerHTML = `
     <!-- Card -->
-    <div>
+    
       <div class="rounded-md mb-4 overflow-hidden h-[200px] bg-[url('${
         data.thumbnail
       }')] bg-cover bg-no-repeat bg-center relative">
@@ -81,7 +82,7 @@ const displayCards = (data) => {
           <span class="text-sm text-gray-500">${data.others.views}</span>
         </div>
       </div>
-    </div>
+    
     `;
 
     cardContainer.append(card);
