@@ -58,7 +58,7 @@ loadData(1000);
 // Convert Seconds to Hours and Minutes
 const convertSeconds = (seconds) => {
   const hours = Math.floor(seconds / 3600);
-  const minutes = Math.floor((seconds / 3600) % 60);
+  const minutes = Math.floor((seconds % 3600) / 60);
   if (seconds == 0 || seconds == null) {
     return "";
   } else {
