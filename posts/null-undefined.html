@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>PH Tube</title>
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <header
+      class="container mx-auto px-4 flex justify-between items-center border-b-2 border-gray-200 py-4"
+    >
+      <a href="./"><img src="../assets/Logo.png" alt="" /></a>
+      <a class="bg-red-500 rounded text-white py-2 px-3" href="./index.html"
+        >Home</a
+      >
+    </header>
+    <main class="container mx-auto px-4 mb-10">
+      <div class="flex flex-col justify-center max-w-4xl mx-auto">
+        <a
+          class="bg-red-500 rounded text-white py-2 px-3 self-center mt-10"
+          href="../blog.html"
+          >Back</a
+        >
+        <h1 class="text-center text-5xl font-bold py-10">
+          Tell us the use cases of null and undefined
+        </h1>
+        <div class="text-justify">
+          <p>
+            null and undefined are two special values in JavaScript, and they
+            have specific use cases:
+          </p>
+          <ol class="list-decimal ml-4 mt-4 flex flex-col gap-4">
+            <li>
+              null:
+              <ul class="list-disc ml-4">
+                <li>
+                  Explicit Absence of Value: null is often used to explicitly
+                  indicate that a variable or object property has no value or
+                  that it represents the absence of an object.
+                </li>
+                <li>
+                  Resetting Values: You can assign null to a variable or
+                  property to reset it to an empty or initial state.
+                </li>
+                <li>
+                  As a Placeholder: Sometimes, null can be used as a placeholder
+                  for a value that will be assigned later. It indicates that a
+                  value is expected but hasn't been provided yet.
+                </li>
+              </ul>
+            </li>
+            <li>
+              undefined:
+              <ul class="list-disc ml-4">
+                <li>
+                  Default Value: Variables that are declared but not initialized
+                  are automatically assigned the value undefined.
+                </li>
+                <li>
+                  Function Parameters: If a function parameter is not provided
+                  with a value, it is set to undefined by default.
+                </li>
+                <li>
+                  Missing Object Properties: When you try to access a property
+                  that doesn't exist on an object, it returns undefined.
+                </li>
+                <li>
+                  Return Value of Functions: If a function does not explicitly
+                  return a value, it returns undefined.
+                </li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
