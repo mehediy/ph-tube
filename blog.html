@@ -36,10 +36,11 @@
             </h2></a
           >
           <p>
-            <strong>var, let, and const</strong> are three keywords used for
-            declaring variables in JavaScript. Each of these has a different
-            scope, which determines where in your code the variable can be
-            accessed and how it behaves.
+            var has function scope, is hoisted, and lacks block scope, making it
+            less predictable and generally discouraged in modern JavaScript. let
+            and const both have block scope, but const is used for variables
+            that can not be reassigned after initialization, while let is used
+            for variables that may be reassigned.
           </p>
           <a
             class="bg-red-500 rounded text-white py-2 px-3 self-start"
@@ -54,8 +55,9 @@
             </h2></a
           >
           <p>
-            null and undefined are two special values in JavaScript, and they
-            have specific use cases.
+            null is typically used to represent the explicit absence of a value,
+            while undefined is often the default value for uninitialized
+            variables, function parameters, and missing object properties.
           </p>
           <a
             class="bg-red-500 rounded text-white py-2 px-3 self-start"
@@ -73,11 +75,9 @@
             REST API, which stands for Representational State Transfer
             Application Programming Interface, is a set of architectural
             principles and constraints for designing and building web services.
-            REST is not a specific technology or protocol but rather an
-            architectural style that uses HTTP (Hypertext Transfer Protocol) for
-            communication. It was introduced by Roy Fielding in his doctoral
-            dissertation in 2000 and has since become a widely used approach for
-            designing web services due to its simplicity and scalability.
+            REST APIs use standard HTTP methods (GET, POST, PUT, DELETE, etc.)
+            to perform CRUD (Create, Read, Update, Delete) operations on
+            resources.
           </p>
           <a
             class="bg-red-500 rounded text-white py-2 px-3 self-start"
