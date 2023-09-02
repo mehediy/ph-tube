@@ -16,7 +16,7 @@ const displayCategories = (data) => {
   data.forEach((cat) => {
     // console.log(cat);
     const button = document.createElement("button");
-    button.innerHTML = `<button onclick="loadData(${cat.category_id})" class="bg-gray-200 text-gray-500 rounded py-1 px-4">${cat.category}</button>`;
+    button.innerHTML = `<button onclick="loadData(${cat.category_id})" class="bg-gray-200 text-gray-500 rounded px-3 py-1 sm:py-1 sm:px-4">${cat.category}</button>`;
     categoriesContainer.append(button);
   });
 };
