@@ -78,7 +78,7 @@ const displayCards = (data) => {
     card.innerHTML = `
     <!-- Card -->
     
-      <div class="rounded-md mb-4 overflow-hidden h-[200px] bg-[url('${
+      <div class="rounded-md mb-4 overflow-hidden h-[170px] bg-[url('${
         data.thumbnail
       }')] bg-cover bg-no-repeat bg-center relative">
       
